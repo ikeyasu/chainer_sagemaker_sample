@@ -43,7 +43,7 @@ $ aws s3 cp s3://sagemaker-ap-northeast-1-111111111111/notebook/chainer_cifar/te
 Run SageMaker local mode. Please use the IAM role above.
 
 ```bash
-$ python start_train.py --local-mode --profile ated --arn arn:aws:iam::111111111111:role/service-role/AmazonSageMaker-ExecutionRole-20181212T121212
+$ python start_train.py --local-mode --arn arn:aws:iam::111111111111:role/service-role/AmazonSageMaker-ExecutionRole-20181212T121212
 ```
 
 ## Custom docker
