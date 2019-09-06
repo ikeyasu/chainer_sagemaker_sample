@@ -36,8 +36,8 @@ $ mkdir -p ~/robo/container
 Download `train_m.npz` and `test_m.npz`. Please use the noted s3 paths above.
 
 ```bash
-$ aws s3 cp `s3://sagemaker-ap-northeast-1-111111111111/notebook/chainer_cifar/train/train_m.npz` train.npz
-$ aws s3 cp `s3://sagemaker-ap-northeast-1-111111111111/notebook/chainer_cifar/test/test_m.npz` test.npz
+$ aws s3 cp s3://sagemaker-ap-northeast-1-111111111111/notebook/chainer_cifar/train/train_m.npz train.npz
+$ aws s3 cp s3://sagemaker-ap-northeast-1-111111111111/notebook/chainer_cifar/test/test_m.npz test.npz
 ```
 
 Run SageMaker local mode. Please use the IAM role above.
