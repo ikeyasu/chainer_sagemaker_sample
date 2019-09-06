@@ -32,7 +32,8 @@ if 'SM_CHANNEL_TRAIN' not in os.environ:
     os.environ['SM_CHANNEL_TRAIN'] = "."
     os.environ['SM_CHANNEL_TEST'] = "."
 
-print(os.environ)
+print('Chainer version: {}'.format(chainer.__version__))
+
 if __name__ == '__main__':
 
     parser = argparse.ArgumentParser()

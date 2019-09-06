@@ -45,3 +45,24 @@ Run SageMaker local mode. Please use the IAM role above.
 ```bash
 $ python start_train.py --local-mode --profile ated --arn arn:aws:iam::111111111111:role/service-role/AmazonSageMaker-ExecutionRole-20181212T121212
 ```
+
+## Custom docker
+
+Login to your ECR.
+
+```
+ $(aws ecr get-login --no-include-email --region ap-northeast-1)
+```
+
+Build docker image.
+
+```bash
+$ cd docker-images
+$ docker build -t 111111111111.dkr.ecr.ap-northeast-1.amazonaws.com/sagemaker-chainer:6.3.0-gpu-py3 .
+```
+
+Push to ECR.
+
+```bash
+$ docker push 111111111111.dkr.ecr.ap-northeast-1.amazonaws.com/sagemaker-chainer:6.3.0-gpu-py3
+```
