@@ -28,7 +28,7 @@ def main(parser=argparse.ArgumentParser()):
     args = parser.parse_args()
 
     boto_session = Session(profile_name=args.profile, region_name=args.region)
-    sagemaker_session = LocalSession(boto_session) if args.local_mode else Session(boto_session)
+    sagemaker_session = LocalSession(boto_session) if args.local_mode else sagemaker.Session(boto_session)
     role = args.arn if args.arn is not None else sagemaker.get_execution_role(sagemaker_session)
 
     gpu = 0 if args.instance_type.startswith('ml.p') and not args.local_mode else -1
